@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>English Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="app">
+
+    <div class="title">
+        {{ question.english }}
+        <hr>
+        {{ question.transcription }}
+    </div>
+
+    <div class="answers">
+        <button class="answer" v-for="answer of answers" @click="check(answer.id)">
+            {{ answer.russian }}
+        </button>
+    </div>
+</div>
+
+<script src="dictionary.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
